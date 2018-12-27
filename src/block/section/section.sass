@@ -1,0 +1,142 @@
+.section
+	&_services
+		padding: 140px 0 90px
+		@media #{$pc}
+			padding: 70px 0 45px
+		.section
+			&__row
+				display: flex
+				@media #{$pc}
+					justify-content: center
+				@media #{$phone}
+					flex-wrap: wrap
+			&__col
+				&_1
+					flex-shrink: 0
+					width: 75%
+					@media #{$pc}
+						width: 60%
+					@media #{$phone}
+						width: 100%
+				&_2
+					flex-shrink: 0
+					width: 25%
+					margin-left: 30px
+					@media #{$pc}
+						margin-left: 20px
+						width: auto
+					@media #{$phone}
+						width: 100%
+						margin-left: 0
+						display: flex
+						justify-content: center
+	&_services-inter
+		padding: 140px 0 90px
+		background-size: 100%
+		background-repeat: no-repeat
+		background-image: url(../img/service-inter-bg.jpg)
+		position: relative
+		@media #{$pc-middle}
+			padding: 70px 0 45px
+		@media #{$phone}
+			background-image: none
+		.section
+			&__row
+				display: flex
+				&_1
+					align-items: center
+					flex-direction: column
+					margin-bottom: 170px
+					@media #{$phone}
+						background-color: rgba($color-1, 1)
+						padding: 60px
+	&_services-exp-logist
+		padding-bottom: 100px
+		@media #{$pc}
+			padding-bottom: 50px
+		.section
+			&__row
+				display: flex
+				@media #{$tablet}
+					flex-direction: column
+					align-items: center
+			&__col
+				flex: 1
+				@media #{$tablet}
+					width: 100%
+					display: flex
+					justify-content: center
+				&_2
+					display: flex
+					justify-content: flex-end
+					@media #{$tablet}
+						display: none
+	&_promo
+		background-color: $color-1
+		padding: 100px 0
+		@media #{$pc}
+			padding: 50px 0
+		.section
+			&__row
+				display: flex
+				@media #{$tablet}
+					flex-wrap: wrap
+			&__col
+				flex: 1
+				@media #{$tablet}
+					width: 100%
+					flex: auto
+					@media #{$tablet}
+						text-align: center
+				&_2
+					display: flex
+					justify-content: flex-end
+					align-items: center
+					@media #{$tablet}
+						justify-content: center
+						margin-top: 15px
+	&_clients
+		padding: 60px 0
+		@media #{$pc}
+			padding: 30px 0
+	&__title
+		&_services
+			font-weight: 700
+			position: relative
+			display: flex
+			align-items: center
+			margin-bottom: 80px
+			@media #{$pc}
+				justify-content: center
+			@media #{$phone}
+				margin-bottom: 40px
+			.section
+				&__title-big
+					color: #f8f8f8
+					font-size: 150px
+					text-transform: uppercase
+					@media #{$pc}
+						font-size: 75px
+					@media #{$phone-mini}
+						font-size: 60px
+				&__title-small
+					color: $color-1
+					font-size: 50px
+					position: absolute
+					left: 0
+					@media #{$pc}
+						left: auto
+						font-size: 25px
+		&_services-inter
+			color: #ffffff
+			font-size: 50px
+			font-weight: 700
+			text-align: center
+			padding: 0 10px
+			margin-bottom: 60px
+			@media #{$pc}
+				font-size: 40px
+				margin-bottom: 40px
+			@media #{$tablet}
+				font-size: 30px
+				margin-bottom: 30px

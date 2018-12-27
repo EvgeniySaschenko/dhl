@@ -1,0 +1,178 @@
+extends ../layout/root
+block title 
+	title Doc title
+block meta_k 
+	meta(name="keywords" content="meta_k .........text")
+block meta_d 
+	meta(name="description" content="meta_d ......text")
+
+block main
+	// services
+	+b.SECTION.section_services
+		.container
+			+e.H1.title_services 
+				+e.SPAN.title-big Services
+				+e.SPAN.title-small Awesome Services
+			+e.row
+				+e.col_1
+					+b.brief-article_services.swiper-container.swiper-parent
+						+e.list.swiper-wrapper
+							+e.item.swiper-slide
+								+e.box-img
+									+e.IMG(src="img/services-1.jpg")
+								+e.H3.title Express Services
+								+e.P.text When an unknown printer took a galley of type and scrambled it to make a type specimen.
+								+e.A(href="#").link Read More
+
+							+e.item.swiper-slide
+								+e.box-img
+									+e.IMG(src="img/services-2.jpg")
+								+e.H3.title parcel & ecommerce
+								+e.P.text When an unknown printer took a galley of type and scrambled it to make a type specimen.
+								+e.A(href="#").link Read More
+
+							+e.item.swiper-slide
+								+e.box-img
+									+e.IMG(src="img/services-3.jpg")
+								+e.H3.title frieght transport
+								+e.P.text When an unknown printer took a galley of type and scrambled it to make a type specimen.
+								+e.A(href="#").link Read More
+						+e.pagination.swiper-pagination
+
+				+e.col_2
+					+b.FORM.form_dhi
+						+e.H3.title DHl Worldwide
+						+e.P.text When an unknown prot printer type and scra
+						+e.item
+							+e.SELECT(name="location" data-placeholder="Location").select_location
+								OPTION
+								+e.OPTION(value="USA").option USA
+								+e.OPTION(value="Russia").option Russia
+								+e.OPTION(value="Canada").option Canada
+
+						+e.box-btn
+							+e.BUTTON.btn(type="submit" class="btn btn_mod-1") explore
+
+
+	// services inter
+	+b.SECTION.section_services-inter
+		+e.row_1
+			+e.H2.title_services-inter One of the best international service provider
+			+b.btn_play-video#btn_services-inter(data-id-control="modal_video-services-inter")
+			+b.modal#modal_video-services-inter
+				+e.close.fas.fa-times
+				+b.video#video_services-inter
+					+e.IFRAME(src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).iframe
+		.container
+			+e.row_2
+				+b.advantages_services-inter.swiper-container.swiper-parent
+					+e.wrapper.swiper-wrapper
+						+e.item.swiper-slide
+								+e.box-img
+									+e.IMG(src="img/service-inter-1.jpg").img
+								+e.H3.title Aerospace Provider
+								+e.UL.list
+									+e.LI.list-item When an unknown printer took.
+									+e.LI.list-item Make a type specimen book.
+									+e.LI.list-item It has survived.
+									+e.LI.list-item Airlines unknown specimen.
+
+						+e.item.swiper-slide
+								+e.box-img
+									+e.IMG(src="img/service-inter-2.jpg").img
+								+e.H3.title Poppins Proved
+								+e.UL.list
+									+e.LI.list-item When an unknown printer took.
+									+e.LI.list-item Make a type specimen book.
+									+e.LI.list-item It has survived.
+									+e.LI.list-item Airlines unknown specimen.
+
+						+e.item.swiper-slide
+								+e.box-img
+									+e.IMG(src="img/service-inter-3.jpg").img
+								+e.H3.title Airline Specimen
+								+e.UL.list
+									+e.LI.list-item When an unknown printer took.
+									+e.LI.list-item Make a type specimen book.
+									+e.LI.list-item It has survived.
+									+e.LI.list-item Airlines unknown specimen.
+					+e.pagination.swiper-pagination
+
+	// services express logistics
+	+b.SECTION.section_services-exp-logist
+		.container
+			+e.row
+				+e.col_1
+					+b.tab_exp-logist
+						+e.list
+							+e.item(data-id="tab__item_express").active express
+							+e.item(data-id="tab__item_logistics") logistics
+						+e.box-content
+							+e.content(id="tab__item_express").active 
+								+b.accordion
+									+e.item 
+										+e.name Track your shipment 
+										+e.content
+												+e.content-title International Services to Another Country
+												+e.UL.content-list
+													+e.LI.content-list-item Emergency
+													+e.LI.content-list-item Time Critical
+													+e.LI.content-list-item Less Urgent
+									+e.item 
+										+e.name New login
+										+e.content
+												+e.content-title International Services to Another Country
+												+e.UL.content-list
+													+e.LI.content-list-item Emergency
+													+e.LI.content-list-item Time Critical
+													+e.LI.content-list-item Less Urgent
+									+e.item 
+										+e.name Find Dhl point
+										+e.content
+												+e.content-title International Services to Another Country
+												+e.UL.content-list
+													+e.LI.content-list-item Emergency
+													+e.LI.content-list-item Time Critical
+													+e.LI.content-list-item Less Urgent
+									+e.item.active
+										+e.name find a service
+										+e.content
+												+e.content-title International Services to Another Country
+												+e.UL.content-list
+													+e.LI.content-list-item Emergency
+													+e.LI.content-list-item Time Critical
+													+e.LI.content-list-item Less Urgent
+
+
+							+e.content(id="tab__item_logistics")
+				+e.col_2
+					+b.img-box_services-exp-logist
+						+e.IMG(src="img/services-express-logistics.png").img
+
+	// promo
+	+b.SECTION.section_promo
+		.container
+			+e.row
+				+e.col_1
+					+b.text-box_promo
+						+e.title Excellence. Simply delivered.
+						+e.P.text International express deliveries; global freight forwarding by air, sea, road and rail; warehousing solutions from packaging, to repairs, to storage; mail deliveries worldwide; and other customized logistic services – with everything DHL does, we help connect people and improve their lives.
+				+e.col_2
+					+b.A(href="#").btn_mod-3 learn more
+
+
+	// clients
+	+b.SECTION.section_clients
+		.container
+			+e.row
+				+b.tile_clients.swiper-container.swiper-parent
+					+e.wrapper.swiper-wrapper
+						+e.item.swiper-slide
+							+e.IMG(src="img/client-logo-1.png").img
+						+e.item.swiper-slide
+							+e.IMG(src="img/client-logo-2.png").img
+						+e.item.swiper-slide
+							+e.IMG(src="img/client-logo-3.png").img
+						+e.item.swiper-slide
+							+e.IMG(src="img/client-logo-4.png").img
+					+e.pagination.swiper-pagination

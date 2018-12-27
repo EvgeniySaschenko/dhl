@@ -1,0 +1,41 @@
+.header
+	position: relative
+	&__box-bg
+		&_1
+			background-color: $color-1
+		&_2
+			background-color: $color-2
+			@media #{$tablet}
+				padding: 10px 0
+	&__row
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&_1
+			padding: 15px 0
+		&_2
+			flex-wrap: wrap
+			.header
+				&__col
+					display: flex
+					&_1
+						width: 20%
+						@media #{$tablet}
+							flex: 1
+					&_2
+						flex: 1
+						@media #{$tablet}
+							order: 1
+							justify-content: flex-end
+						@media #{$phone}
+							order: 0
+					&_3
+						width: 20%
+						justify-content: flex-end
+						@media #{$tablet}
+							flex: 1
+						@media #{$phone}
+							flex: auto
+							width: 100%
+							justify-content: center

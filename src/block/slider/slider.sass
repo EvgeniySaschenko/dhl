@@ -1,0 +1,78 @@
+.slider
+	width: 100%
+	&__item
+		position: relative
+	&_header
+		@media #{$phone}
+			display: none
+		.slider
+			&__item
+				background-size: cover
+				background-repeat: no-repeat
+				position: relative
+				&-abs
+					height: 100%
+					width: 100%
+					position: absolute
+					top: 0
+					.container
+						height: 100%
+						display: flex
+						align-items: center
+				&-img
+					width: 100%
+					position: relative
+				&::after
+					content: ""
+					background: linear-gradient(to right, $color-1, transparent 70%)
+					display: block
+					height: 100%
+					width: 100%
+					position: absolute
+					top: 0
+					left: 0
+					z-index: 1
+			&__item-box
+				position: absolute
+				z-index: 2
+				&-text
+					&_title
+						font-size: 70px
+						color: #ffffff
+						font-weight: 700
+						line-height: 1
+						@media #{$pc}
+							font-size: 40px
+						&::after
+							content: ""
+							border-bottom: 3px solid $color-2
+							width: 100px
+							margin: 60px 0 30px
+							display: block
+							@media #{$pc}
+								font-size: 40px
+								margin: 30px 0 15px
+					&_description
+						color: $color-2
+						font-size: 20px
+						line-height: 1.2
+						margin-bottom: 45px
+						@media #{$pc}
+							margin-bottom: 20px
+							font-size: 16px
+					&_advantages
+						color: #ffffff
+						font-size: 20px
+						font-weight: 700
+						text-transform: uppercase
+						margin-bottom: 30px
+						@media #{$tablet}
+							display: none
+						span
+							letter-spacing: 1px
+							&::after
+								content: "."
+								color: $color-2
+								padding: 0 25px
+							&:last-child::after
+									content: ""

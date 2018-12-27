@@ -1,0 +1,32 @@
+.brief-article
+	@media #{$pc}
+		padding-bottom: 60px
+	@media #{$phone}
+		width: 270px
+		margin-bottom: 30px
+	&__item
+		width: 270px
+	&__box-img
+		margin-bottom: 30px
+	&__title
+		color: $color-1
+		margin-bottom: 15px
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase
+	&__text
+		font-size: 16px
+		margin-bottom: 15px
+		line-height: 1.5
+	&__link
+		font-size: 16px
+		font-weight: 700
+		color: #000000
+		display: inline-block
+		&::after
+			content: "\f0da"
+			color: $color-1
+			font-family: "Font Awesome 5 Free"
+			display: inline-block
+			margin-left: 10px
+			font-weight: 900

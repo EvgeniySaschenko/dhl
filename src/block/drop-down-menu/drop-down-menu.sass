@@ -1,0 +1,27 @@
+.drop-down-menu
+	color: #ffffff
+	cursor: pointer
+	&__option
+		margin: 10px 0
+		padding: 0 15px
+	ul
+		width: 100%
+		background-color: rgba($color-1,.8)
+		margin-top: 5px
+	select
+		display: none
+	.jq-selectbox
+		&__select
+			display: flex
+		&__dropdown
+			width: 110%
+			z-index: 2000
+		&__trigger-arrow
+			margin-left: 10px
+			&::after
+				font-family: "Font Awesome 5 Free"
+				content: "\f107"
+				display: inline-block
+				font-style: normal
+				font-variant: normal
+				font-weight: 900

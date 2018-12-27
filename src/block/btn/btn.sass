@@ -1,0 +1,48 @@
+.btn
+	border-radius: 40px
+	padding: 0 35px
+	height: 50px
+	display: inline-block
+	line-height: 50px
+	font-size: 12px
+	font-weight: 700
+	text-transform: uppercase
+	transition-duration: .5s
+	&:hover
+		transition-duration: .5s
+	&_mod-1
+		background-color: $color-2
+		color: $color-1
+		box-shadow: 0 5px 20px rgba($color-2,0.4)
+		&:hover
+			background-color: $color-2 * 0.9
+	&_mod-2
+		background-color: transparent
+		color: #ffffff
+		border: 2px solid #ffffff
+		&:hover
+			background-color: rgba(0,0,0,.1)
+	&_mod-3
+		background-color: rgba(0,0,0,.2)
+		color: #ffffff
+		&:hover
+			background-color: rgba(0,0,0,.3)
+
+	&_play-video
+		border-radius: 50%
+		height: 70px
+		width: 70px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $color-2
+		cursor: pointer
+		padding: 0
+		&::before
+			content: "\f04b"
+			display: inline-block
+			font-family: "Font Awesome 5 Free"
+			font-size: 20px
+			font-weight: 900
+			color: $color-1
+			margin-left: 3px

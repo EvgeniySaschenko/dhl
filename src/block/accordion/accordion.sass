@@ -1,0 +1,59 @@
+.accordion
+	&__name
+		color: #ffffff
+		border: 2px solid #ffffff
+		text-transform: uppercase
+		position: relative
+		min-height: 45px
+		padding: 15px 50px 15px 15px
+		cursor: pointer
+		&::after
+			position: absolute
+			right: 0
+			top: 0
+			font-family: "Font Awesome 5 Free"
+			content: "\f107"
+			display: flex
+			justify-content: center
+			align-items: center
+			font-weight: 900
+			height: 100%
+			width: 45px
+			border-left: 2px solid #ffffff
+	&__content
+		display: none
+		padding: 20px
+		background-color: rgba(0,0,0,.1)
+		border-left: 2px solid $color-2
+		border-right: 2px solid $color-2
+		border-bottom: 2px solid $color-2
+		&-title
+			font-size: 16px
+			font-weight: 700
+			margin-bottom: 15px
+			color: #ffffff
+		&-list
+			&-item
+				color: #ffffff
+				line-height: 1.5
+				&::before
+					content: "\f0da"
+					color: #ffcc00
+					font-family: "Font Awesome 5 Free"
+					display: inline-block
+					margin-right: 10px
+					font-weight: 900
+	&__item
+		margin-bottom: 15px
+		&.active
+			.accordion
+				&__name
+					color: $color-1
+					border: 2px solid $color-2
+					background-color: $color-2
+					min-height: 49px
+					&::after
+						content: "\f106"
+						border-left: 2px solid $color-1
+				&__content
+					display: block

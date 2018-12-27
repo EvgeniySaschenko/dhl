@@ -1,0 +1,37 @@
+.advantages
+	@media #{$pc}
+		padding-bottom: 60px
+	@media #{$phone}
+		width: 370px
+	&__wrapper
+		margin-bottom: 10px
+	&__item
+		width: 370px
+		box-shadow: inset 0 0 10px rgba(155,155,155,.2)
+		padding-bottom: 10px
+		background-color: #ffffff
+		@media #{$pc}
+			display: flex
+			align-items: center
+			flex-direction: column
+			margin-bottom: 30px
+	&__title
+		padding: 30px 30px 0
+		color: $color-1
+		font-size: 20px
+		font-weight: 700
+	&__box-img
+		max-height: 200px
+		overflow: hidden
+	&__list
+		padding: 30px
+		&-item
+			line-height: 1.5
+			font-size: 16px
+			&::before
+				content: "\f0da"
+				color: $color-2
+				font-family: "Font Awesome 5 Free"
+				display: inline-block
+				margin-right: 10px
+				font-weight: 900

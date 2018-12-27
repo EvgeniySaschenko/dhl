@@ -1,0 +1,88 @@
+.nav
+	&__list
+		display: flex
+	&__item
+		padding: 0 12px
+		text-transform: uppercase
+	&__link
+		&::after
+			display: block
+			content: attr(title)
+			font-weight: bold
+			overflow: hidden
+			visibility: hidden
+	&_header
+		width: 100%
+		@media #{$tablet}
+			position: absolute
+			top: 0
+			right: 0
+			width: 100%
+			z-index: 1000
+			&.active
+				height: 100vh
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: $color-2
+				.nav
+					&__list
+						display: flex
+						flex-wrap: wrap
+					&__item
+						width: 100%
+						text-align: center
+						padding-top: 20px
+		.nav
+			&__link
+				color: $color-1
+			&__list
+				width: 100%
+				justify-content: space-between
+				@media #{$tablet}
+					display: none
+			&__item
+				padding: 45px 0
+				position: relative
+				@media #{$tablet}
+					padding: 15px 0
+				&:hover,
+				&.active
+					font-weight: 700
+					&::after
+						content: ""
+						position: absolute
+						bottom: 0
+						left: 0
+						display: inline-block
+						width: 100%
+						border-bottom: 4px solid $color-1
+						@media #{$tablet}
+							border-bottom: 1px solid $color-1
+
+
+	&_footer
+		.nav
+			&__list
+				flex-direction: column
+			&__item
+				text-transform: uppercase
+				line-height: 1.5
+				padding: 0
+				&::before
+					content: "\f0da"
+					color: $color-1
+					font-family: "Font Awesome 5 Free"
+					display: inline-block
+					margin-right: 10px
+					font-weight: 900
+			&__link
+				color: $text
+				font-weight: 700
+				&:hover
+					color: $color-2
+					@media #{$pc-middle}
+						color: $color-1
+				&_social-media
+					&:hover
+						color: #017edf

@@ -1,0 +1,16 @@
+.tile
+	@media #{$pc}
+		padding-bottom: 40px
+	&__item
+		width: 270px
+		height: 130px
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		background-color: rgba(0,0,0,.1)
+		border: 1px solid rgba($color-1, .1)
+		cursor: pointer
+		&:hover
+			transition-duration: .5s
+			border: 1px solid $color-1

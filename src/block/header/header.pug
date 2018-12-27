@@ -1,0 +1,98 @@
+mixin b-header()
+	+b.HEADER.header
+		+e.box-bg_1
+			.container
+				+e.row_1
+					+e.col_1
+						+b.SELECT(name="lang").drop-down-menu
+							+e.OPTION(value="1").option English
+							+e.OPTION(value="2").option Russian
+
+					+e.col_2
+						+b.A(href="#").link_contact-center.mar-r_30
+							+e.I.icon.fas.fa-users
+							span Contact Center
+
+						+b.SELECT(name="contry" data-placeholder="Country Profile").drop-down-menu
+							OPTION
+							+e.OPTION(value="1").option USA
+							+e.OPTION(value="2").option Canada
+							+e.OPTION(value="3").option Russia
+
+
+		+e.box-bg_2
+			.container
+				+e.row_2
+					+e.col_1
+						+b.logo
+							include ../../assets/img/logo.svg
+
+					+e.col_2
+						+b.BUTTON.btn-burger_header(id="btn-burger_header" data-id-control="nav__header")
+							+e.item
+						+b.NAV.nav(class="_header" id="nav__header")
+							+e.UL.list#nav-list_header
+								+e.LI.item
+									+e.A.link(href="#" title="Express") Express
+								+e.LI.item
+									+e.A.link(href="#" title="Parcel & Ecommerce") Parcel & Ecommerce
+								+e.LI.item
+									+e.A.link(href="#" title="Logistics") Logistics
+								+e.LI.item
+									+e.A.link(href="#" title="Mail") Mail
+								+e.LI.item
+									+e.A.link(href="#" title="Press") Press
+								+e.LI.item
+									+e.A.link(href="#" title="About") About
+					+e.col_3
+						+b.search
+							+e.BUTTON.btn.fas.fa-search
+							+e.INPUT.field
+
+		+e.row_3
+			+b.slider_header.swiper-container.swiper-parent
+				+e.wrapper.swiper-wrapper
+					+e.item.swiper-slide
+						+e.IMG(data-src="img/header-bg-1.jpg").item-img.swiper-lazy
+						+e.item-abs
+							.container
+								+e.item-box
+									+e.item-box-text_title We Deliver <br> With Speed
+									+e.P.item-box-text_description When an unknown printer took a galley of type and scrambled <br> it to make a type specimen book. It has survived not only five centuries
+									+e.P.item-box-text_advantages 
+										span Amazing  
+										span Quick 
+										span 24/7 Supports
+									+e.item-box-btn
+										+b.A(href="#").btn_mod-1.mar-r_30 Learn More
+										+b.A(href="#").btn_mod-2 dhl worldwide
+
+					+e.item.swiper-slide
+						+e.IMG(data-src="img/header-bg-2.jpg").item-img.swiper-lazy
+						+e.item-abs
+							.container
+								+e.item-box
+									+e.item-box-text_title We Deliver <br> With Speed
+									+e.P.item-box-text_description When an unknown printer took a galley of type and scrambled <br> it to make a type specimen book. It has survived not only five centuries
+									+e.P.item-box-text_advantages 
+										span Amazing  
+										span Quick 
+										span 24/7 Supports
+									+e.item-box-btn
+										+b.A(href="#").btn_mod-1.mar-r_30 Learn More
+										+b.A(href="#").btn_mod-2 dhl worldwide
+
+					+e.item.swiper-slide
+						+e.IMG(data-src="img/header-bg-3.jpg").item-img.swiper-lazy
+						+e.item-abs
+							.container
+								+e.item-box
+									+e.item-box-text_title We Deliver <br> With Speed
+									+e.P.item-box-text_description When an unknown printer took a galley of type and scrambled <br> it to make a type specimen book. It has survived not only five centuries
+									+e.P.item-box-text_advantages 
+										span Amazing  
+										span Quick 
+										span 24/7 Supports
+									+e.item-box-btn
+										+b.A(href="#").btn_mod-1.mar-r_30 Learn More
+										+b.A(href="#").btn_mod-2 dhl worldwide
