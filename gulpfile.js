@@ -56,11 +56,11 @@ gulp.task('sass', () => {
 	setTimeout( () => {
 		return gulp.src('src/assets/style.sass')
 			.pipe(plumber())
-			.pipe(sass())
 			.pipe(gulpIf( !isProduction, sourcemaps.init() ))
+			.pipe(sass())
+			.pipe(gulpIf( !isProduction, sourcemaps.write() ))
 			.pipe(autoprefixer())
 			.pipe(gulpIf( isProduction, csso() ))
-			.pipe(gulpIf( !isProduction, sourcemaps.write() ))
 		.pipe(gulp.dest('build/css/'));
 	},500 );
 });
@@ -84,7 +84,6 @@ gulp.task('js', () => {
 // SVG sprite
 gulp.task('sprite-svg', ()=> {
 	return gulp.src('src/assets/icons/**/*.svg')
-		.pipe(gulpIf( isProduction, imagemin() ))
 		.pipe(svgSymbols({
 			default: ['default-svg', 'default-css']
 		}))
@@ -110,7 +109,7 @@ gulp.task('copy', () => {
 	gulp.src('src/assets/fonts/**/*')
 		.pipe(gulp.dest('build/fonts'))
 	gulp.src(['src/assets/img/**/*'])
-		.pipe(gulpIf( isProduction, imagemin() ))
+		.pipe(gulpIf( isProduction, imagemin([imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng()]) ))
 		.pipe(gulp.dest('build/img'))
 	gulp.src('src/assets/root/**/*')
 		.pipe(gulp.dest('build'));

@@ -24,7 +24,7 @@ mixin b-header()
 			.container
 				+e.row_2
 					+e.col_1
-						+b.logo
+						+b.logo_header#logo_header
 							include ../../assets/img/logo.svg
 
 					+e.col_2
@@ -45,7 +45,7 @@ mixin b-header()
 								+e.LI.item
 									+e.A.link(href="#" title="About") About
 					+e.col_3
-						+b.search
+						+b.search_header#search_header
 							+e.BUTTON.btn.fas.fa-search
 							+e.INPUT.field
 
